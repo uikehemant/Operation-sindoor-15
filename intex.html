@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ऑपरेशन सिंदूर - तिरंगा यात्रा</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #FF9933;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .quote {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 4px solid #FF9933;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        .firecracker {
+            display: inline-block;
+            width: 20px;
+            height: 40px;
+            background-color: #FF5722;
+            margin: 0 5px;
+            position: relative;
+            animation: explode 0.5s infinite alternate;
+        }
+        .firecracker:nth-child(2n) {
+            background-color: #FFC107;
+            animation-delay: 0.2s;
+        }
+        .firecracker:nth-child(3n) {
+            background-color: #FF5252;
+            animation-delay: 0.4s;
+        }
+        @keyframes explode {
+            0% {
+                transform: translateY(0);
+                height: 40px;
+            }
+            100% {
+                transform: translateY(-10px);
+                height: 50px;
+                box-shadow: 0 0 15px #FF5722;
+            }
+        }
+        .name-input {
+            margin: 30px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #138808;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #138808;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+        }
+        button:hover {
+            background-color: #0E6F0A;
+        }
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        .generated-link {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            word-break: break-all;
+            display: none;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .tiranga {
+            height: 20px;
+            width: 100%;
+            background: linear-gradient(to bottom, #FF9933 33%, white 33%, white 66%, #138808 66%);
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tiranga"></div>
+        
+        <h1>ऑपरेशन सिंदूर</h1>
+        
+        <div class="quote">"तिरंगा यात्रा"</div>
+        <div class="quote">"राष्ट्रीय सुरक्षा के लिए नागरिक"</div>
+        <div class="quote">"हम सशस्त्र बलों के साथ हैं, राष्ट्र के लिए ऑपरेशन सिंदूर के साथ हैं"</div>
+        <div class="quote">"ऑल इंडिया"</div>
+        
+        <div class="fireworks">
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+            <div class="firecracker"></div>
+        </div>
+        
+        <div class="name-input">
+            <p>अपना नाम दर्ज करें:</p>
+            <input type="text" id="userName" placeholder="आपका नाम">
+            <button onclick="generateLink()">
+                <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                लिंक जनरेट करें
+            </button>
+        </div>
+        
+        <div id="generatedLink" class="generated-link"></div>
+        
+        <div class="footer">
+            जय हिंद, वंदे मातरम
+        </div>
+        <div class="tiranga"></div>
+    </div>
+
+    <script>
+        function generateLink() {
+            const userName = document.getElementById('userName').value.trim();
+            if (!userName) {
+                alert('कृपया अपना नाम दर्ज करें');
+                return;
+            }
+            
+            // Create the URL with the user's name as a parameter
+            const currentUrl = window.location.href.split('?')[0];
+            const shareUrl = `${currentUrl}?name=${encodeURIComponent(userName)}`;
+            
+            // Display the generated link
+            const linkDiv = document.getElementById('generatedLink');
+            linkDiv.innerHTML = `
+                <p>इस लिंक को शेयर करें:</p>
+                <a href="${shareUrl}" target="_blank">${shareUrl}</a>
+                <p>या WhatsApp पर शेयर करें:</p>
+                <button onclick="shareOnWhatsApp('${shareUrl}')">
+                    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp पर शेयर करें
+                </button>
+            `;
+            linkDiv.style.display = 'block';
+            
+            // Scroll to the generated link
+            linkDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function shareOnWhatsApp(url) {
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`ऑपरेशन सिंदूर में शामिल हों: ${url}`)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Check for name parameter in URL on page load
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nameParam = urlParams.get('name');
+            
+            if (nameParam) {
+                // Display the sharer's name
+                const container = document.querySelector('.container');
+                const nameDisplay = document.createElement('div');
+                nameDisplay.className = 'quote';
+                nameDisplay.textContent = `शेयर करने वाला: ${decodeURIComponent(nameParam)}`;
+                container.insertBefore(nameDisplay, container.querySelector('.name-input'));
+                
+                // Add fireworks celebration
+                const fireworks = document.querySelector('.fireworks');
+                for (let i = 0; i < 20; i++) {
+                    const fc = document.createElement('div');
+                    fc.className = 'firecracker';
+                    fireworks.appendChild(fc);
+                }
+            }
+        };
+    </script>
+</body>
+</html>
